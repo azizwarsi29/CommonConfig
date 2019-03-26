@@ -43,23 +43,7 @@ spring:
   cloud:
     config:
       uri: http://localhost:8001  
-  datasource:
-        url: jdbc:mysql://localhost:3306/sharekhan
-        username: root
-        password: S$root
-        tomcat:
-          test-while-idle: true
-          max-active: "500"
-        driverClassName: com.mysql.jdbc.Driver
-      jpa:
-        show-sql: true
-        hibernate:
-          ddl-auto: update
-          naming:
-            strategy: org.hibernate.cfg.ImprovedNamingStrategy
-        properties:
-          hibernate:
-            dialect: org.hibernate.dialect.MySQL5Dialect
+  
 
 
 
