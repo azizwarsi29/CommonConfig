@@ -1,0 +1,66 @@
+zuul:
+  #Service will be mapped under the /api URI
+  prefix: /api
+  add-host-header: true
+  
+  
+  
+    
+
+eureka:
+  instance:
+    instanceId: http://localhost:${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:8003/eureka/
+    
+    
+    
+security:
+  oauth2:
+    client:
+      grant-type: password 
+      client-id :  My-Web 
+      client-secret : secret
+      scope : all    
+    
+  # Increase the Hystrix timeout to 60s (globally)
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000  
+
+
+
+spring:
+  application:
+    name: zuul-service
+  cloud:
+    config:
+      uri: http://localhost:8001  
+  datasource:
+        url: jdbc:mysql://localhost:3306/sharekhan
+        username: root
+        password: S$root
+        tomcat:
+          test-while-idle: true
+          max-active: "500"
+        driverClassName: com.mysql.jdbc.Driver
+      jpa:
+        show-sql: true
+        hibernate:
+          ddl-auto: update
+          naming:
+            strategy: org.hibernate.cfg.ImprovedNamingStrategy
+        properties:
+          hibernate:
+            dialect: org.hibernate.dialect.MySQL5Dialect
+
+
+
+      
