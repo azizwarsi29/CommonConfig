@@ -13,7 +13,7 @@ spring:
 
 eureka:
   instance:
-    instanceId: http://localhost:${spring.application.name}:${spring.application.instance_id:${random.value}}
+    instanceId: zuulserver:${random.value}}
   client:
     fetchRegistry: true
     registryFetchIntervalSeconds: 5
