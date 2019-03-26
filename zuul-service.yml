@@ -5,7 +5,11 @@ zuul:
   
   
   
-    
+
+
+spring:
+  application:
+    name: zuul-service    
 
 eureka:
   instance:
@@ -37,12 +41,7 @@ hystrix:
 
 
 
-spring:
-  application:
-    name: zuul-service
-  cloud:
-    config:
-      uri: http://localhost:8001  
+
   
 
 
