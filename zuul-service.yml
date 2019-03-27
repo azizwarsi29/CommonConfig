@@ -1,0 +1,21 @@
+zuul:
+  #Service will be mapped under the /api URI
+  prefix: /api
+  add-host-header: true
+  
+ # Increase the Hystrix timeout to 60s (globally)
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000  
+            
+security:
+  oauth2:
+    client:
+      grant-type: password 
+      client-id :  My-Web 
+      client-secret : secret
+      scope : all                          
