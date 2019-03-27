@@ -15,7 +15,7 @@ hystrix:
 security:
   oauth2:
     client:
-      grant-type: password 
+      grant-type: password,client_credentials,refresh_token 
       client-id :  My-Web
       client-secret : secret
       scope : all                          
