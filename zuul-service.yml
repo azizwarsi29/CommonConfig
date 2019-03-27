@@ -16,6 +16,6 @@ security:
   oauth2:
     client:
       grant-type: password 
-      client-id :  Changed
+      client-id :  My-Web
       client-secret : secret
       scope : all                          
