@@ -42,7 +42,9 @@ spring :
             dialect: org.hibernate.dialect.MySQL5Dialect     
 
   
-
+      jackson:
+        serialization:
+         FAIL_ON_EMPTY_BEANS : false
 
 
       
