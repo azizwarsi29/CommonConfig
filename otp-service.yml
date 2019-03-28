@@ -1,0 +1,7 @@
+otp:
+  length: 4
+  maxattempts: 3     
+  blocktime-min: 1  
+  blocktime-sec: 1 
+  blocktime-hours: 1 
+  expirytime-min : 1
