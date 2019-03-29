@@ -18,4 +18,11 @@ security:
       grant-type: password
       client-id :  My-Web
       client-secret : secret
-      scope : all                          
+      scope : all
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+      base-path: /
