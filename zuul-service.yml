@@ -20,3 +20,7 @@ security:
       client-id :  My-Web
       client-secret : secret
       scope : all
+      
+turbine:
+  app-config: lead-service,user-service
+  cluster-name-expression: new String("default")
