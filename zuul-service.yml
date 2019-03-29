@@ -19,10 +19,3 @@ security:
       client-id :  My-Web
       client-secret : secret
       scope : all
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream
-      base-path: /
