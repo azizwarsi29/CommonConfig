@@ -3,16 +3,7 @@ zuul:
   prefix: /api
   sensitiveHeaders: Cookie,Set-Cookie
   add-host-header: true
-  
- # Increase the Hystrix timeout to 60s (globally)
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 600000000
-            
+              
 security:
   oauth2:
     client:
