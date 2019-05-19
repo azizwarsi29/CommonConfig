@@ -24,13 +24,13 @@ security:
 
 spring :
     datasource:
-        url: jdbc:sqlserver://172.16.10.25:9094;databaseName=Supremo_102018
-        username: Supuser
-        password: S$up8i40
+        url: jdbc:mysql://localhost:3306/sharekhan
+        username: root
+        password: root
         tomcat:
           test-while-idle: true
           max-active: "500"
-        driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        driverClassName: com.mysql.jdbc.Driver
     jpa:
         show-sql: true
         hibernate:
